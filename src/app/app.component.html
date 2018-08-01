@@ -1,20 +1,51 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<div class="w3-card-4" xmlns="">
+
+  <div class="w3-container w3-green">
+    <h2>Training</h2>
+  </div>
+
+  <form class="w3-container">
+
+    <label>X array:</label>
+    <input style="margin-bottom: 5px" id="x" class="w3-input" type="text" placeholder="[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+    26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49]" (change)="getXArray($event.target.value)">
+
+    <label>Y array:</label>
+    <input style="margin-bottom: 5px"  id="y" class="w3-input" type="text" placeholder="0.43,-3.02,28.73,8.90,39.03,36.24,35.34,56.97,37.60,63.53,52.56,72.77,80.45,72.33,91.21,77.68,112.10,101.95,104.42,101.83,132.91,135.53,146.29,152.99,140.07,157.00,168.88,153.88,177.51,168.25,177.80,189.42,200.21,201.98,205.05,198.74,213.81,222.31,220.98,241.83,245.70,246.57,250.95,249.01,252.32,260.56,271.98,296.53,302.98,299.48" (change)="getYArray($event.target.value)">
+
+    <label>Learning Rate:</label>
+    <input style="margin-bottom: 5px"  id="l" class="w3-input" type="number" (change)="getLearningRate($event.target.value)" placeholder="0.00001">
+
+    <label>Epochs:</label>
+    <input id="e" class="w3-input" type="number" (change)="getEpochs($event.target.value)" placeholder="1000">
+    <span style="padding: 2px;"></span>
+
+
+  </form>
+  <div style="text-align: center">
+    <button  (click)="train()">Train</button>
+  </div>
+  <span style="padding: 2px;"></span>
+
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<span style="padding: 5px;"></span>
+
+<div class="w3-card-4">
+
+  <div class="w3-container w3-green">
+    <h2>Prediction</h2>
+  </div>
+
+  <form class="w3-container">
+
+    <h4>Predicted Y: <span id="pred">{{ prediction }}</span> , it should be : <span id="should">{{ should }}</span> </h4>
+    <label>Prediction X</label>
+    <input id="input" type="number" class="w3-input" (change)="predict($event.target.value)" value="25">
+    <span style="padding: 5px;"></span>
+
+  </form>
+
+</div>
+
+<div id="myDiv"></div>
 

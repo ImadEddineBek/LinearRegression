@@ -1,0 +1,35 @@
+span#pred{
+  background-color: #3CBC8D;
+  color: white;
+  padding: 5px;
+  border-radius: 2px;
+}
+
+span#should{
+  background-color: #b6bc47;
+  color: white;
+  padding: 5px;
+  border-radius: 2px;
+}
+
+form{
+  margin: 20px;
+}
+
+button:hover {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
+button {
+  /*display: block;*/
+  /*margin-left: 200px;*/
+  /*margin-right: auto;*/
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+  border: 2px solid #4CAF50; /* Green */
+  padding: 5px 10px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+}
