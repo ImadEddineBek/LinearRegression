@@ -12,7 +12,7 @@ export class AppComponent implements OnInit {
   linearModel: tf.Sequential;
   prediction: any;
   should: any;
-  learningRate: 0.00001;
+  learningRate: 0.000005;
   epochs: 1000;
   @ViewChild('canvas') canvas: ElementRef;
   chart = [];
