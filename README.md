@@ -10,16 +10,17 @@ You can find the demo at  (https://tensorflow-linear-regression.herokuapp.com/)
 The demo is devided into three parts.
 ## Training:
 As we are using a variant of gradient descent, in the training part of the demo you can provide the training data the learning rate and the amount epochs.
-![Training](screen shots/training.png)
+![training](https://user-images.githubusercontent.com/26652672/43607095-2797db4a-9695-11e8-93c8-60244f05a76b.png)
+
 
 
 ## Prediction:
 There is also a field for entering an X value to test the model on, that shows the predicted value and the expected value as the default values where suposed to be generated with Y = 6 * X + 2.
-![Prediction](screen shots/prediction.png)
+![prediction](https://user-images.githubusercontent.com/26652672/43607090-26a988d2-9695-11e8-8d0c-20c8ba842b06.png)
 
 ## Graph:
 The last part is a graph that plots the training data set with the predicted X,Y pair along side the linear regression line.
-![Graph](screen shots/graph.png)
+![graph](https://user-images.githubusercontent.com/26652672/43607088-267aecc0-9695-11e8-9792-ca6c1d3dcf03.png)
 
 # Dependecies
 * [Angluar](https://angular.io/)
@@ -37,24 +38,24 @@ Now in order to provide your own data set you should enter two arrays with the s
 **Example:**
 
 You don't need to specify the learning rate and epochs but it is good to mess around with it since it can give u a very cool understanding of deep learning.
-![Training Example](screen shots/trainingEx.png)
+![trainingex](https://user-images.githubusercontent.com/26652672/43607096-27c1e28c-9695-11e8-97c1-0b79bcd55d34.png)
 
 Now for the prediction part you should just enter the X value in the field and it will update the graph and the expected and predicted values.
 
 **Example:**
 
 Predicting for *X = 25*
-![Prediction Example 25](screen shots/prediction25.png)
+![prediction25](https://user-images.githubusercontent.com/26652672/43607093-273bc2b0-9695-11e8-9782-be24569e6e6f.png)
 Predicting for *X = -10*
-![Prediction Example -10](screen shots/prediction-10.png)
+![prediction-10](https://user-images.githubusercontent.com/26652672/43607092-270cfdfe-9695-11e8-923c-61752259c346.png)
 Predicting for *X = 10*
-![Prediction Example 10](screen shots/prediction10.png)
+![prediction10](https://user-images.githubusercontent.com/26652672/43607091-26dbc446-9695-11e8-9459-17430f4ca5f8.png)
 Predicting for *X = 60*
-![Prediction Example 60](screen shots/prediction60.png)
+![prediction60](https://user-images.githubusercontent.com/26652672/43607094-27691d78-9695-11e8-883c-69ff90fc7569.png)
 
 Now the last part is something called **Exploding Gradients** which you might notice if you use a large learning rate with a large number of epochs.
 
-![Training Example](screen shots/explosive gradients.png)
+ ![explosive gradients](https://user-images.githubusercontent.com/26652672/43607097-28140828-9695-11e8-8a0c-235b70a5a142.png)
 
 As you can see the neural net(even if it is a one layer) outputs a NaN(Not A Number) and is not able to make the data for the chart.
 
