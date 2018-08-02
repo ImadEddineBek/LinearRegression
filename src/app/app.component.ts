@@ -12,8 +12,8 @@ export class AppComponent implements OnInit {
   linearModel: tf.Sequential;
   prediction: any;
   should: any;
-  learningRate: 0.0000001;
-  epochs: 200;
+  learningRate = 0.001;
+  epochs = 100;
   @ViewChild('canvas') canvas: ElementRef;
   chart = [];
   x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
@@ -82,68 +82,6 @@ export class AppComponent implements OnInit {
 
     // @ts-ignore
     Plotly.newPlot('myDiv', data, layout);
-    // const data = [];
-    // for (let i = 0; i < this.x.length; i++) {
-    //   data.push({
-    //     x: this.x[i],
-    //     y: this.y[i]
-    //   });
-    // }
-    // console.log(typeof this.prediction);
-    // this.x.push(this.p as number);
-    // // this.y.push(Math.round(this.prediction as number));
-    // // @ts-ignore
-    // this.chart = new Chart(document.getElementById('canvas').getContext('2d'), {
-    //   type: 'line',
-    //   data: {
-    //     datasets: [
-    //       {
-    //         type: 'scatter',
-    //         label: 'Training',
-    //         data: [{x: this.p, y: this.prediction}],
-    //         borderColor: '#3CBC8D',
-    //         fill: false,
-    //         showLine: false,
-    //         pointRadius: 5,
-    //
-    //       },
-    //       {
-    //         type: 'scatter',
-    //         label: 'prediction',
-    //         data: [{x: this.p, y: this.prediction}],
-    //         borderColor: '#3d43ba',
-    //         fill: true,
-    //         showLine: false,
-    //         pointRadius: 10,
-    //
-    //       },
-    //     ]
-    //   },
-    //   options: {
-    //     legend: {
-    //       display: true
-    //     },
-    //     scales: {
-    //       xAxes: [{
-    //         display: true,
-    //         ticks: {
-    //           max: 50,
-    //           min: -50,
-    //           stepSize: 0.5
-    //         }
-    //       }],
-    //       yAxes: [{
-    //         display: true,
-    //         ticks: {
-    //           beginAtZero: true,
-    //           max: Math.max(...this.y, this.prediction) + 1,
-    //           min: Math.min(...this.y, this.prediction) - 1
-    //         }
-    //       }],
-    //     }
-    //   }
-    // });
-    // console.log('done');
 
   }
 
