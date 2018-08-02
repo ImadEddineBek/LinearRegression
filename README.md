@@ -10,5 +10,5 @@ You can find the demo at  (https://tensorflow-linear-regression.herokuapp.com/)
 
 ## Training:
 As we are using a variant of gradient descent, in the training part of the demo you can provide the training data the learning rate and the amount epochs.
-![Training]()
+![Training](https://github.com/ImadEddineBek/LinearRegression/blob/master/screen%20shots/training.png)
 2- 

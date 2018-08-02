@@ -49,6 +49,14 @@ export class AppComponent implements OnInit {
     this.predict(25);
 
 
+  }
+
+  predict(val: number) {
+    this.p = val;
+    const output = this.linearModel.predict(tf.tensor2d([val], [1, 1])) as any;
+    this.prediction = Array.from(output.dataSync())[0];
+    this.should = 6 * val + 2;
+
     const minX = Math.min(...this.x, this.p);
     const maxX = Math.max(...this.x, this.p);
 
@@ -90,15 +98,7 @@ export class AppComponent implements OnInit {
     const layout = {};
 
     // @ts-ignore
-    Plotly.newPlot('myDiv', data, layout);
-
-  }
-
-  predict(val: number) {
-    this.p = val;
-    const output = this.linearModel.predict(tf.tensor2d([val], [1, 1])) as any;
-    this.prediction = Array.from(output.dataSync())[0];
-    this.should = 6 * val + 2;
+    Plotly.react('myDiv', data, layout);
   }
 
   getXArray(val: any) {
