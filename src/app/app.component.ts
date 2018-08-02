@@ -66,7 +66,16 @@ export class AppComponent implements OnInit {
       x: [this.p],
       y: [this.prediction],
       name: 'Input Prediction',
-      mode: 'markers'
+      mode: 'markers',
+      marker: {
+        color: '#3CBC8D',
+        size: 20,
+        opacity: 0.5,
+        line: {
+          color: '#3CBC8D',
+          width: 2
+        }
+      }
     };
 
     const predicted = {
