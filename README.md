@@ -31,16 +31,16 @@ Express and other depencies for the heroku deployment.
 
 # Usage
 
-To use the default training data to predict on a new X value use the **prediction X** field to enter the amount.
+* To use the default training data to predict on a new X value use the **prediction X** field to enter the amount.
 
-Now in order to provide your own data set you should enter two arrays with the same length.
+* Now in order to provide your own data set you should enter two arrays with the same length.
 
 **Example:**
 
 You don't need to specify the learning rate and epochs but it is good to mess around with it since it can give u a very cool understanding of deep learning.
 ![trainingex](https://user-images.githubusercontent.com/26652672/43607096-27c1e28c-9695-11e8-97c1-0b79bcd55d34.png)
 
-Now for the prediction part you should just enter the X value in the field and it will update the graph and the expected and predicted values.
+* Now for the prediction part you should just enter the X value in the field and it will update the graph and the expected and predicted values.
 
 **Example:**
 
@@ -53,7 +53,7 @@ Predicting for *X = 10*
 Predicting for *X = 60*
 ![prediction60](https://user-images.githubusercontent.com/26652672/43607094-27691d78-9695-11e8-883c-69ff90fc7569.png)
 
-Now the last part is something called **Exploding Gradients** which you might notice if you use a large learning rate with a large number of epochs.
+* Now the last part is something called **Exploding Gradients** which you might notice if you use a large learning rate with a large number of epochs.
 
  ![explosive gradients](https://user-images.githubusercontent.com/26652672/43607097-28140828-9695-11e8-8a0c-235b70a5a142.png)
 
